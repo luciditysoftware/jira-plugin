@@ -334,7 +334,7 @@ public class JiraSite extends AbstractDescribableImpl<JiraSite> {
      * @return null if remote access is not supported.
      */
     protected JiraSession createSession() {
-        if (credentials == null) {
+        if (credentials == null || url == null) {
             return null;    // remote access not supported
         }
 
